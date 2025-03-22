@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 1440px;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid black;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav div {
+            border: 2px solid black;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-align: center;
+            border-bottom: 2px solid black;
+            padding: 40px;
+        }
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .button {
+            border: 2px solid black;
+            padding: 15px 30px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="nav">
+                <div>Login</div>
+                <div>Sign Up</div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Welcome to UVCE Alumni-Student Network</h1>
+            <div class="button">Get Started</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2025 UVCE Alumni Network
+        </div>
+    </div>
+
+</body>
+</html>

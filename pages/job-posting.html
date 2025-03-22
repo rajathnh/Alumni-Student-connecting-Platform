@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UVCE Alumni Network - Post a Job</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    /* Left Sidebar */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .left-sidebar ul li.active {
+      background: #eee;
+    }
+    .tips-box {
+      border: 2px solid black;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    .tips-box h3 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .tips-box ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .tips-box ul li {
+      border: none;
+      padding: 5px 0;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    /* Job Posting Form */
+    .job-posting {
+      flex: 1;
+      padding: 30px;
+      border: 2px solid black;
+      margin: 0 20px;
+    }
+    .job-posting h1 {
+      margin-bottom: 30px;
+      font-size: 32px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 12px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-group .hint {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .checkbox-item input {
+      width: 18px;
+      height: 18px;
+      border: 2px solid black;
+    }
+    .form-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .form-row .form-group {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .preview-button, .submit-button {
+      padding: 15px;
+      border: 2px solid black;
+      background: transparent;
+      text-align: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+    
+    <!-- Main Layout -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+         
+          <li class="active">Job Opportunities</li>
+        </ul>
+        
+        <div class="tips-box">
+          <h3>Job Posting Tips</h3>
+          <ul>
+            <li>Be specific about required skills and experience</li>
+            <li>Include salary range to attract qualified candidates</li>
+            <li>Clearly explain your company culture</li>
+            <li>List both required and preferred qualifications</li>
+            <li>Mention if remote work is an option</li>
+          </ul>
+        </div>
+      </aside>
+      
+      <!-- Job Posting Form Section -->
+      <section class="job-posting">
+        <h1>Post a Job</h1>
+        <form>
+          <!-- Company Details -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company-name">Company Name*</label>
+              <input type="text" id="company-name" placeholder="Enter company name" required />
+            </div>
+            <div class="form-group">
+              <label for="company-website">Company Website</label>
+              <input type="url" id="company-website" placeholder="https://example.com" />
+            </div>
+          </div>
+          
+          <!-- Job Title and Type -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="job-title">Job Title*</label>
+              <input type="text" id="job-title" placeholder="e.g., Senior Software Engineer" required />
+            </div>
+            <div class="form-group">
+              <label for="job-type">Job Type*</label>
+              <select id="job-type" required>
+                <option value="">Select job type</option>
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="internship">Internship</option>
+                <option value="contract">Contract</option>
+                <option value="freelance">Freelance</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Experience and Deadline -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="experience">Experience Level*</label>
+              <select id="experience" required>
+                <option value="">Select experience level</option>
+                <option value="entry">Entry Level (0-2 years)</option>
+                <option value="mid">Mid Level (3-5 years)</option>
+                <option value="senior">Senior Level (6+ years)</option>
+                <option value="lead">Lead/Manager (8+ years)</option>
+                <option value="executive">Executive (10+ years)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="deadline">Application Deadline*</label>
+              <input type="date" id="deadline" required />
+            </div>
+          </div>
+          
+          <!-- Location and Work Type -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location">Location*</label>
+              <input type="text" id="location" placeholder="City, Country" required />
+            </div>
+            <div class="form-group">
+              <label>Work Environment</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="onsite" />
+                  <label for="onsite">On-site</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="remote" />
+                  <label for="remote">Remote</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="hybrid" />
+                  <label for="hybrid">Hybrid</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Salary Range -->
+          <div class="form-group">
+            <label for="salary-range">Salary Range</label>
+            <input type="text" id="salary-range" placeholder="e.g., £40,000 - £60,000 per year" />
+            <div class="hint">Providing a salary range helps attract qualified candidates</div>
+          </div>
+          
+          <!-- Skills Required -->
+          <div class="form-group">
+            <label for="skills">Required Skills</label>
+            <input type="text" id="skills" placeholder="e.g., Python, React, AWS, Project Management" />
+            <div class="hint">Separate skills with commas</div>
+          </div>
+          
+          <!-- Job Description -->
+          <div class="form-group">
+            <label for="job-description">Job Description*</label>
+            <textarea id="job-description" placeholder="Describe the role, responsibilities, and expectations..." required></textarea>
+          </div>
+          
+          <!-- Qualifications -->
+          <div class="form-group">
+            <label for="qualifications">Qualifications</label>
+            <textarea id="qualifications" placeholder="List required qualifications, education, and experience..."></textarea>
+          </div>
+          
+          <!-- Benefits -->
+          <div class="form-group">
+            <label for="benefits">Benefits & Perks</label>
+            <textarea id="benefits" placeholder="Describe company benefits, work culture, and perks..."></textarea>
+          </div>
+          
+          <!-- Application Instructions -->
+          <div class="form-group">
+            <label for="application-instructions">Application Instructions</label>
+            <textarea id="application-instructions" placeholder="How should candidates apply? Any specific requirements?"></textarea>
+          </div>
+          
+          <!-- Alumni Connection -->
+          <div class="form-group">
+            
+              
+            </div>
+          </div>
+          
+          <!-- Button Group -->
+          <div class="button-group">
+            
+            <button type="submit" class="submit-button">Post Job</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network | Privacy Policy | Terms of Use
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UVCE Alumni Network - Jobs Page</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    /* Left Sidebar */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .left-sidebar ul li.active {
+      background: #eee;
+    }
+    .action-buttons {
+      margin-bottom: 20px;
+    }
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Middle Content */
+    .middle-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .section {
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .filter-item {
+      border: 2px solid black;
+      padding: 10px 15px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .filter-item.active {
+      background: #eee;
+    }
+    /* Job Listings */
+    .job-card {
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .job-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .job-meta {
+      font-size: 14px;
+    }
+    .job-info {
+      margin-bottom: 15px;
+    }
+    .job-info p {
+      margin-bottom: 5px;
+    }
+    .job-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .job-action {
+      border: 1px solid black;
+      padding: 8px 15px;
+      cursor: pointer;
+      text-align: center;
+      background: white;
+    }
+    /* Right Sidebar */
+    .right-sidebar {
+      width: 250px;
+      border-left: 2px solid black;
+      padding: 20px;
+    }
+    .stats-box {
+      border: 2px solid black;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .stats-box h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .featured-item {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .featured-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search jobs, companies...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+    
+    <!-- Main Layout: Left Sidebar, Middle Content, Right Sidebar -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="action-buttons">
+          <div class="create-button">+ Create Post</div>
+          <div class="create-button">+ Post Job</div>
+        </div>
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+          
+          <li class="active">Job Opportunities</li>
+        </ul>
+      </aside>
+      
+      <!-- Middle Content -->
+      <section class="middle-content">
+        <h2 style="text-align: center; margin-bottom: 20px; font-size: 32px;">Jobs Posted</h2>
+        
+        <!-- Filter Bar for Job Types -->
+        <div class="filter-bar">
+          <div class="filter-item active">All Jobs</div>
+          <div class="filter-item">Full-Time</div>
+          <div class="filter-item">Contract</div>
+          <div class="filter-item">Part-Time</div>
+          <div class="filter-item">Remote</div>
+          <div class="filter-item">Internship</div>
+        </div>
+        
+        <!-- Job Listings -->
+        <div class="job-card">
+          <div class="job-header">
+            <div class="job-title">Software Engineer</div>
+            <div class="job-meta">Posted 3 days ago</div>
+          </div>
+          <div class="job-info">
+            <p><strong>Posted by:</strong> Alumnus John Doe (2018 Batch)</p>
+            <p><strong>Company:</strong> ABC Tech</p>
+            <p><strong>Location:</strong> London, UK</p>
+            <p><strong>Job Type:</strong> Full-Time</p>
+            <p><strong>Application Deadline:</strong> 2025-12-31</p>
+            <p><strong>Description:</strong> Looking for a skilled software engineer with 3+ years of experience in backend development. Must have strong knowledge of Python, Django, and AWS.</p>
+          </div>
+          <div class="job-actions">
+            <button class="job-action">Apply Now</button>
+            <button class="job-action">Save</button>
+            <button class="job-action">Share</button>
+            <button class="job-action">Report</button>
+          </div>
+        </div>
+        
+        <div class="job-card">
+          <div class="job-header">
+            <div class="job-title">Frontend Developer</div>
+            <div class="job-meta">Posted 1 week ago</div>
+          </div>
+          <div class="job-info">
+            <p><strong>Posted by:</strong> Alumna Jane Smith (2020 Batch)</p>
+            <p><strong>Company:</strong> XYZ Solutions</p>
+            <p><strong>Location:</strong> Manchester, UK</p>
+            <p><strong>Job Type:</strong> Contract</p>
+            <p><strong>Application Deadline:</strong> 2025-11-15</p>
+            <p><strong>Description:</strong> 6-month contract role for a frontend developer with expertise in React and TypeScript. The project involves rebuilding our client portal with modern technologies.</p>
+          </div>
+          <div class="job-actions">
+            <button class="job-action">Apply Now</button>
+            <button class="job-action">Save</button>
+            <button class="job-action">Share</button>
+            <button class="job-action">Report</button>
+          </div>
+        </div>
+        
+        <div class="job-card">
+          <div class="job-header">
+            <div class="job-title">Data Analyst</div>
+            <div class="job-meta">Posted 2 weeks ago</div>
+          </div>
+          <div class="job-info">
+            <p><strong>Posted by:</strong> Alumnus Raj Patel (2015 Batch)</p>
+            <p><strong>Company:</strong> DataCorp</p>
+            <p><strong>Location:</strong> Birmingham, UK</p>
+            <p><strong>Job Type:</strong> Part-Time</p>
+            <p><strong>Application Deadline:</strong> 2025-10-01</p>
+            <p><strong>Description:</strong> Part-time data analyst role (20 hours/week) ideal for those pursuing further education. Will involve building dashboards and analyzing customer behavior data.</p>
+          </div>
+          <div class="job-actions">
+            <button class="job-action">Apply Now</button>
+            <button class="job-action">Save</button>
+            <button class="job-action">Share</button>
+            <button class="job-action">Report</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Right Sidebar -->
+      <aside class="right-sidebar">
+        <div class="stats-box">
+          <h3>Job Market Overview</h3>
+          <div class="stat-row">
+            <span>Total Jobs:</span>
+            <span>145</span>
+          </div>
+          <div class="stat-row">
+            <span>Alumni Posted:</span>
+            <span>87</span>
+          </div>
+          <div class="stat-row">
+            <span>New This Week:</span>
+            <span>24</span>
+          </div>
+          <div class="stat-row">
+            <span>Most Common:</span>
+            <span>Software Dev</span>
+          </div>
+        </div>
+        
+        <h3 style="margin-bottom: 10px;">Featured Alumni Recruiters</h3>
+        <div class="featured-item">
+          <div class="featured-title">Microsoft</div>
+          <p>5 open positions</p>
+          <p>Posted by: Priya M (2010)</p>
+        </div>
+        <div class="featured-item">
+          <div class="featured-title">Google</div>
+          <p>3 open positions</p>
+          <p>Posted by: Vikram S (2012)</p>
+        </div>
+        <div class="featured-item">
+          <div class="featured-title">Infosys</div>
+          <p>8 open positions</p>
+          <p>Posted by: Arjun K (2015)</p>
+        </div>
+        
+        <div style="margin-top: 20px; text-align: center;">
+          <div class="create-button">Post Your Job</div>
+          <div class="create-button">Job Alert Settings</div>
+        </div>
+      </aside>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network
+    </footer>
+  </div>
+</body>
+</html>

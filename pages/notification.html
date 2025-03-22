@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifications</title>
+  <style>
+    /* Global Styles (Consistent with other pages) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header (Consistent with other pages) */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout (Consistent with other pages) */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    /* Left Sidebar (Consistent with other pages) */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .left-sidebar ul li.active {
+      background: #eee;
+    }
+    .action-buttons {
+      margin-bottom: 20px;
+    }
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Middle Content */
+    .middle-content {
+      flex: 1;
+      padding: 20px;
+    }
+    /* Notifications Section */
+    .notifications {
+      width: 100%;
+    }
+    .notifications h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .notification-card {
+      border: 2px solid black;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .notification-card .notification-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .notification-card .notification-content {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .notification-card .notification-date {
+      font-size: 12px;
+      color: #777;
+    }
+    /* Footer (Consistent with other pages) */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search posts, people, jobs...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+
+    <!-- Main Layout: Left Sidebar, Middle Content -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="action-buttons">
+          <div class="create-button">+ Create Post</div>
+          <div class="create-button">+ Post Job</div>
+        </div>
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+          
+          <li>Job Opportunities</li>
+        </ul>
+      </aside>
+
+      <!-- Middle Content -->
+      <main class="middle-content">
+        <section class="notifications">
+          <h1>Notifications</h1>
+          
+          <div class="notification-card">
+            <div class="notification-title">New Message Received</div>
+            <div class="notification-content">You have a new message from Alumni John.</div>
+            <div class="notification-date">March 25, 2025 - 10:15 AM</div>
+          </div>
+          
+          <div class="notification-card">
+            <div class="notification-title">Job Application Update</div>
+            <div class="notification-content">Your application for Software Engineer at ABC Tech has been viewed.</div>
+            <div class="notification-date">March 24, 2025 - 02:30 PM</div>
+          </div>
+          
+          <div class="notification-card">
+            <div class="notification-title">New Comment on Your Post</div>
+            <div class="notification-content">Student Emily commented on your post "AI in Healthcare".</div>
+            <div class="notification-date">March 23, 2025 - 08:45 AM</div>
+          </div>
+          
+          <!-- More notification cards can be added here -->
+          
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network
+    </footer>
+  </div>
+</body>
+</html>

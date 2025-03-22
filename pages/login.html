@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page Wireframe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 1440px;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Login Section */
+    .login-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      min-height: 400px;
+      border-bottom: 2px solid black;
+    }
+    .login-section h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    form {
+      width: 100%;
+      max-width: 500px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .button {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto 0;
+      padding: 15px 30px;
+      border: 2px solid black;
+      background: transparent;
+      cursor: pointer;
+      text-align: center;
+      font-size: 16px;
+    }
+    /* Footer */
+    .footer {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">Logo</div>
+      <nav class="nav">
+        <a href="#">Back</a>
+      </nav>
+    </div>
+
+    <!-- Login Section -->
+    <div class="login-section">
+      <h1>Login</h1>
+      <form>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" />
+        </div>
+        
+        <button type="submit" class="button">Login</button>
+<div class="register-option" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  Don't have an account? <a href="registration.html">Register Now</a>
+</div>
+
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © 2025 UVCE Alumni Network
+    </div>
+  </div>
+</body>
+</html>

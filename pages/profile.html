@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reddit-Style Profile Page Wireframe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    /* Left Sidebar */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .action-buttons {
+      margin-bottom: 20px;
+    }
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Middle Content */
+    .middle-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .section {
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .profile-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .stat-item {
+      text-align: center;
+      flex: 1;
+      padding: 10px;
+      border: 1px solid black;
+      margin: 0 5px;
+    }
+    .post {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .post-meta {
+      font-size: 14px;
+    }
+    .post-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .filter-item {
+      border: 2px solid black;
+      padding: 10px 15px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .filter-item.active {
+      background: #eee;
+    }
+    /* Right Sidebar */
+    .right-sidebar {
+      width: 250px;
+      border-left: 2px solid black;
+      padding: 20px;
+      text-align: center;
+    }
+    .user-info {
+      margin-bottom: 20px;
+    }
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid black;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .user-role {
+      display: inline-block;
+      border: 1px solid black;
+      padding: 5px 10px;
+      margin: 10px 0;
+    }
+    .user-action {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search posts, people, jobs...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+    
+    <!-- Main Layout: Left Sidebar, Middle Content, Right Sidebar -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="action-buttons">
+          <div class="create-button">+ Create Post</div>
+          <div class="create-button">+ Post Job</div>
+          
+        </div>
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+          
+          <li>Job Opportunities</li>
+          
+          
+        </ul>
+      </aside>
+      
+      <!-- Middle Content -->
+      <section class="middle-content">
+        <!-- Profile Overview Section -->
+        <div class="section">
+          <h2>Profile Overview</h2>
+          <div class="profile-stats">
+            <div class="stat-item">
+              <strong>24</strong>
+              <div>Posts</div>
+            </div>
+            
+            <div class="stat-item">
+              <strong>42</strong>
+              <div>Discussions</div>
+            </div>
+            <div class="stat-item">
+              <strong>5</strong>
+              <div>Jobs Posted</div>
+            </div>
+          </div>
+          <div class="post">
+            <p><strong>About Me:</strong></p>
+            <p>Software Engineer with 5+ years of experience in web development. UVCE Computer Science graduate (Class of 2018). Passionate about building scalable applications and mentoring junior developers.</p>
+          </div>
+        </div>
+        
+        <!-- Filter Bar for Activity Types -->
+        <div class="filter-bar">
+          <div class="filter-item active">All Activity</div>
+          <div class="filter-item">My Posts</div>
+          <div class="filter-item">Comments</div>
+          <div class="filter-item">Jobs Posted</div>
+          
+          <div class="filter-item">Upvoted</div>
+          <div class="filter-item">Saved</div>
+        </div>
+        
+        <!-- Recent Activity Section -->
+        <div class="section">
+          <h2>Recent Activity</h2>
+          
+          <div class="post">
+            <div class="post-header">
+              <div><strong>Posted a Job: Frontend Developer at TechCorp</strong></div>
+              <div class="post-meta">2 days ago</div>
+            </div>
+            <p>Looking for a skilled Frontend Developer with React experience to join our growing team. Competitive salary and benefits package.</p>
+            <div class="post-actions">
+              <span>12 Applicants</span>
+              <span>Edit</span>
+              <span>Close Position</span>
+              <span>Share</span>
+            </div>
+          </div>
+          
+          <div class="post">
+            <div class="post-header">
+              <div><strong>Posted: Machine Learning Study Group - Join Us!</strong></div>
+              <div class="post-meta">1 week ago</div>
+            </div>
+            <p>Starting a weekly ML study group for UVCE students and alumni. We'll be covering the latest papers and techniques. All experience levels welcome!</p>
+            <div class="post-actions">
+              <span>42 Upvotes</span>
+              <span>15 Comments</span>
+              <span>Edit</span>
+              <span>Delete</span>
+            </div>
+          </div>
+          
+          <div class="post">
+            <div class="post-header">
+              <div><strong>Commented on: Industry Insights - Future of Cloud Computing</strong></div>
+              <div class="post-meta">2 weeks ago</div>
+            </div>
+            <p>"Great analysis! I'd add that edge computing will likely play a much bigger role in the next 5 years as IoT deployments grow."</p>
+            <div class="post-actions">
+              <span>8 Upvotes</span>
+              <span>View Discussion</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Right Sidebar -->
+      <aside class="right-sidebar">
+        <div class="user-info">
+          <div class="profile-picture">Profile Photo</div>
+          <h2>Arun Sharma</h2>
+          <div class="user-role">Alumni (2018)</div>
+          <p>Software Engineer at TechCorp</p>
+        </div>
+        
+        <a href="./settings.html" class="user-action">Settings</a>
+        <a href="#" class="user-action">Resume/CV</a>
+        <a href="#" class="user-action">Job Preferences</a>
+        
+      </aside>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network
+    </footer>
+  </div>
+</body>
+</html>

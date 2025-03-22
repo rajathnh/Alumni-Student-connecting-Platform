@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messaging Interface</title>
+  <style>
+    /* Global Styles (Consistent with other pages) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header (Consistent with other pages) */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout (Consistent with other pages) */
+    .main {
+      display: flex;
+      padding: 20px;
+      min-height: calc(100vh - 120px); /* Adjust height subtracting header and footer */
+    }
+    /* Left Sidebar (Consistent with other pages) */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .left-sidebar ul li.active {
+      background: #eee;
+    }
+    .action-buttons {
+      margin-bottom: 20px;
+    }
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Middle Content */
+    .middle-content {
+      flex: 1;
+      display: flex;
+    }
+    /* Chat List */
+    .chat-list {
+      width: 300px;
+      border-left: 2px solid black; /* Changed to left border */
+      overflow-y: auto;
+    }
+    .chat-item {
+      padding: 15px;
+      border-bottom: 2px solid black;
+      cursor: pointer;
+    }
+    .chat-item:hover {
+      background: #f0f0f0;
+    }
+    .chat-item.active {
+      background: #eee;
+    }
+    /* Conversation */
+    .conversation {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .conversation-header {
+      padding: 10px 20px;
+      border-bottom: 2px solid black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .message {
+      margin-bottom: 15px;
+    }
+    .message.sent {
+      text-align: right;
+    }
+    .message .message-content {
+      display: inline-block;
+      padding: 10px;
+      border: 2px solid black;
+      max-width: 70%;
+    }
+    .message.received .message-content {
+      background: #eee;
+    }
+    /* Message Input */
+    .message-input {
+      display: flex;
+      padding: 15px;
+      gap: 10px;
+    }
+    .message-input textarea {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      resize: none;
+      font-size: 16px;
+    }
+    .message-input button {
+      padding: 10px 20px;
+      border: 2px solid black;
+      background: transparent;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Footer (Consistent with other pages) */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search posts, people, jobs...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+
+    <!-- Main Layout: Left Sidebar, Middle Content -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="action-buttons">
+          <div class="create-button">+ Create Post</div>
+          <div class="create-button">+ Post Job</div>
+        </div>
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+          
+          <li>Job Opportunities</li>
+        </ul>
+      </aside>
+
+      <!-- Middle Content -->
+      <main class="middle-content">
+        <section class="conversation">
+          <div class="conversation-header">Alumni X</div>
+          <div class="messages">
+            <div class="message received">
+              <div class="message-content">
+                Hello! I saw your post about machine learning and wanted to discuss further.
+              </div>
+            </div>
+            <div class="message sent">
+              <div class="message-content">
+                Thanks for reaching out! I'd be happy to chat about ML.
+              </div>
+            </div>
+            <div class="message received">
+              <div class="message-content">
+                Pretty good, just checking in on our project updates.
+              </div>
+            </div>
+            <!-- More messages... -->
+          </div>
+          <div class="message-input">
+            <textarea placeholder="Type your message..." rows="2"></textarea>
+            <button>Send</button>
+          </div>
+        </section>
+        <div class="chat-list">
+          <div class="chat-item active">Alumni X</div>
+          <div class="chat-item">Student Y</div>
+          <div class="chat-item">Alumni Z</div>
+          <div class="chat-item">Student W</div>
+          <!-- More chat items... -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network
+    </footer>
+  </div>
+</body>
+</html>

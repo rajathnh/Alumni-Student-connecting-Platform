@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings</title>
+  <style>
+    /* Global Styles (Consistent with other pages) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header (Consistent with other pages) */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout (Consistent with other pages) */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    /* Left Sidebar (Consistent with other pages) */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .left-sidebar ul li.active {
+      background: #eee;
+    }
+    .action-buttons {
+      margin-bottom: 20px;
+    }
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Middle Content */
+    .middle-content {
+      flex: 1;
+      padding: 20px;
+    }
+    /* Settings Section */
+    .settings-section {
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .settings-section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .settings-group {
+      margin-bottom: 15px;
+    }
+    .settings-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .settings-group input[type="text"],
+    .settings-group input[type="email"],
+    .settings-group input[type="password"],
+    .settings-group select {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .settings-group .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .settings-group .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .settings-group .checkbox-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      border: 2px solid black;
+    }
+    .settings-group .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .settings-group .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .settings-group .radio-item input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      border: 2px solid black;
+    }
+    .settings-group .button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid black;
+      background: transparent;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+    }
+    /* Footer (Consistent with other pages) */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search posts, people, jobs...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+
+    <!-- Main Layout: Left Sidebar, Middle Content -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="action-buttons">
+          <div class="create-button">+ Create Post</div>
+          <div class="create-button">+ Post Job</div>
+        </div>
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+          
+          <li>Job Opportunities</li>
+        </ul>
+      </aside>
+
+      <!-- Middle Content -->
+      <main class="middle-content">
+        <!-- Account Settings -->
+        <section class="settings-section">
+          <h2>Account Settings</h2>
+          <div class="settings-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="Arun Sharma">
+          </div>
+          <div class="settings-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="arun.sharma@example.com">
+          </div>
+          <div class="settings-group">
+            <label for="password">Change Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password">
+          </div>
+          <div class="settings-group">
+            <button class="button">Delete Account</button>
+          </div>
+        </section>
+
+        <!-- Profile Settings -->
+        <section class="settings-section">
+          <h2>Profile Settings</h2>
+          <div class="settings-group">
+            <button class="button">Edit Profile Information</button>
+          </div>
+          <div class="settings-group">
+            <button class="button">Manage Resume/CV</button>
+          </div>
+          <div class="settings-group">
+            <label for="portfolio">Portfolio Link</label>
+            <input type="text" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+          </div>
+          <div class="settings-group">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="text" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+          </div>
+        </section>
+
+        <!-- Job Preferences -->
+        <section class="settings-section">
+          <h2>Job Preferences</h2>
+          <div class="settings-group">
+            <label>Job Types</label>
+            <div class="checkbox-group">
+              <div class="checkbox-item"><input type="checkbox" id="full-time" name="job-type" value="full-time"> <label for="full-time">Full-Time</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="part-time" name="job-type" value="part-time"> <label for="part-time">Part-Time</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="internship" name="job-type" value="internship"> <label for="internship">Internship</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="contract" name="job-type" value="contract"> <label for="contract">Contract</label></div>
+            </div>
+          </div>
+          <div class="settings-group">
+            <label for="job-locations">Job Locations</label>
+            <input type="text" id="job-locations" name="job-locations" placeholder="e.g., London, Bangalore, Remote">
+          </div>
+          <div class="settings-group">
+            <label for="job-industries">Job Industries</label>
+            <input type="text" id="job-industries" name="job-industries" placeholder="e.g., Tech, Finance, Healthcare">
+          </div>
+          <div class="settings-group">
+            <label for="experience-level">Experience Level</label>
+            <select id="experience-level" name="experience-level">
+              <option value="">Select experience level</option>
+              <option value="entry">Entry Level (0-2 years)</option>
+              <option value="mid">Mid Level (3-5 years)</option>
+              <option value="senior">Senior Level (6+ years)</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="settings-section">
+          <h2>Notifications</h2>
+          <div class="settings-group">
+            <label>Receive Notifications For</label>
+            <div class="checkbox-group">
+              <div class="checkbox-item"><input type="checkbox" id="new-messages" name="notifications" value="new-messages"> <label for="new-messages">New Messages</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="new-comments" name="notifications" value="new-comments"> <label for="new-comments">New Comments on Your Posts</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="comments-on-posts" name="notifications" value="comments-on-posts"> <label for="comments-on-posts">New Comments on Posts You've Commented On</label></div>
+              <div class="checkbox-item"><input type="checkbox" id="job-updates" name="notifications" value="job-updates"> <label for="job-updates">Job Application Updates</label></div>
+              
+              <div class="checkbox-item"><input type="checkbox" id="trending-topics" name="notifications" value="trending-topics"> <label for="trending-topics">Trending Topics</label></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Job Alerts -->
+        <section class="settings-section">
+          <h2>Job Alerts</h2>
+          <div class="settings-group">
+            <label>Enable Job Alerts</label>
+            <div class="radio-group">
+              <div class="radio-item"><input type="radio" id="job-alerts-on" name="job-alerts" value="on"> <label for="job-alerts-on">On</label></div>
+              <div class="radio-item"><input type="radio" id="job-alerts-off" name="job-alerts" value="off" checked> <label for="job-alerts-off">Off</label></div>
+            </div>
+          </div>
+          <div class="settings-group">
+            <label for="job-alert-frequency">Job Alert Frequency</label>
+            <select id="job-alert-frequency" name="job-alert-frequency">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+          <div class="settings-group">
+            <label for="job-alert-keywords">Job Alert Keywords</label>
+            <input type="text" id="job-alert-keywords" name="job-alert-keywords" placeholder="e.g., Software Engineer, AI, Data Science">
+          </div>
+        </section>
+
+        <!-- Privacy -->
+        <section class="settings-section">
+          <h2>Privacy Settings</h2>
+          <div class="settings-group">
+            <label>Profile Visibility</label>
+            <div class="radio-group">
+              <div class="radio-item"><input type="radio" id="profile-public" name="profile-visibility" value="public"> <label for="profile-public">Public</label></div>
+             <div class="radio-item"><input type="radio" id="profile-private" name="profile-visibility" value="private"> <label for="profile-private">Private</label></div>
+            </div>
+          </div>
+          <div class="settings-group">
+            <label>Who Can Message You</label>
+            <div class="radio-group">
+              <div class="radio-item"><input type="radio" id="message-everyone" name="message-who" value="everyone"> <label for="message-everyone">Everyone</label></div>
+              <div class="radio-item"><input type="radio" id="message-none" name="message-who" value="none"> <label for="message-none">No One</label></div>
+            </div>
+          </div>
+          <div class="settings-group">
+            <label>Who Can See Your Posts</label>
+            <div class="radio-group">
+              <div class="radio-item"><input type="radio" id="posts-everyone" name="posts-who" value="everyone"> <label for="posts-everyone">Everyone</label></div>
+              
+              <div class="radio-item"><input type="radio" id="posts-only-me" name="posts-who" value="only-me"> <label for="posts-only-me">Only Me</label></div>
+            </div>
+          </div>
+          <div class="settings-group">
+            <label>Data Sharing Preferences</label>
+            <div class="radio-group">
+              <div class="radio-item"><input type="radio" id="data-sharing-on" name="data-sharing" value="on"> <label for="data-sharing-on">On</label></div>
+              <div class="radio-item"><input type="radio" id="data-sharing-off" name="data-sharing" value="off" checked> <label for="data-sharing-off">Off</label></div>
+            </div>
+          </div>
+        </section>
+        <div class="settings-group">
+            <button class="button">Save Changes</button>
+          </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network
+    </footer>
+  </div>
+</body>
+</html>

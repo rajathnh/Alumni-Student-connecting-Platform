@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Post</title>
+  <style>
+    /* Global Styles (Consistent with other pages) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    /* Header (Consistent with other pages) */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .search-container {
+      display: flex;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 20px;
+    }
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      border-left: none;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav a {
+      border: 2px solid black;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    /* Main Layout (Consistent with other pages) */
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    /* Left Sidebar (Consistent with other pages) */
+    .left-sidebar {
+      width: 250px;
+      border-right: 2px solid black;
+      padding: 20px;
+    }
+    .left-sidebar ul {
+      list-style: none;
+    }
+    .left-sidebar ul li {
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .left-sidebar ul li.active {
+      background: #eee;
+    }
+    .action-buttons {
+      margin-bottom: 20px;
+    }
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* Middle Content */
+    .middle-content {
+      flex: 1;
+      padding: 20px;
+    }
+    /* Create Post Form */
+    .create-post-form {
+      border: 2px solid black;
+      padding: 30px;
+    }
+    .create-post-form h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input[type="text"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid black;
+      font-size: 16px;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    .form-group .tag-input {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .form-group .tag-input .tag {
+      border: 1px solid black;
+      padding: 2px 5px;
+      font-size: 14px;
+      background: #eee;
+    }
+    .submit-button {
+      display: block;
+      width: 200px;
+      margin: 20px auto 0;
+      padding: 15px;
+      border: 2px solid black;
+      background: transparent;
+      text-align: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    /* Footer (Consistent with other pages) */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UVCE</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search posts, people, jobs...">
+        <button class="search-button">Search</button>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+      </nav>
+    </header>
+
+    <!-- Main Layout: Left Sidebar, Middle Content -->
+    <div class="main">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <div class="action-buttons">
+          <div class="create-button">+ Create Post</div>
+          <div class="create-button">+ Post Job</div>
+        </div>
+        <ul>
+          <li>My Feed</li>
+          <li>Trending Topics</li>
+          
+          <li>Job Opportunities</li>
+        </ul>
+      </aside>
+
+      <!-- Middle Content -->
+      <main class="middle-content">
+        <section class="create-post-form">
+          <h1>Create a New Post</h1>
+          <form>
+            <!-- Post Title -->
+            <div class="form-group">
+              <label for="post-title">Post Title*</label>
+              <input type="text" id="post-title" name="post-title" placeholder="Enter post title" required>
+            </div>
+            <!-- Post Content -->
+            <div class="form-group">
+              <label for="post-content">Post Content*</label>
+              <textarea id="post-content" name="post-content" placeholder="Write your post content here..." required></textarea>
+            </div>
+            <!-- Tags -->
+            <!-- Tags -->
+<div class="form-group">
+    <label for="post-tags">Tags</label>
+    <input type="text" id="post-tags" name="post-tags" placeholder="Enter tags separated by commas (e.g., AI, Tech, UVCE)" />
+  </div>
+  
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Post</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 UVCE Alumni Network
+    </footer>
+  </div>
+</body>
+</html>
